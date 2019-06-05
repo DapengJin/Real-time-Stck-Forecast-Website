@@ -1,0 +1,15 @@
+flask
+flask_wtf
+wtforms
+flask_login
+flask_sqlalchemy
+flask_bootstrap
+sqlalchemy
+mysql-connector-python
+feedparser
+scipy
+numpy
+pandas
+matplotlib
+sklearn
+alpha_vantage
