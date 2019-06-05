@@ -1,0 +1,85 @@
+{# author: Shuaishuai Sun #}
+{% block head %}
+<head >
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+  <link href="{{ url_for('static', filename='./vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+  <title>Stock forecastor</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+   <!-- Bootstrap -->
+  <link href="{{ url_for('static', filename='./vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="{{ url_for('static', filename='./vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+      <!-- Custom Theme Style -->
+  <link href="{{ url_for('static', filename='./build/css/custom.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='./build/css/search.css') }}" rel="stylesheet">
+  
+
+</head>
+{% endblock %}
+
+{% block content %}
+<body class="search_back-color">
+
+
+{% block top_navigation %}
+  <nav class="search_back-color navbar-default back-color">
+    <div class="container">
+
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand"><i class="fa fa-paw"></i> <span>Stock Tracking</span></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul id='userInfo' class="nav navbar-nav navbar-right">
+          <li>
+            <a href="login" id='userID'>Login</a>
+          </li>
+          <li>
+            <a href="signup" id="signUp" >Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+{% endblock %}
+  <div class="col-md-6 col-md-offset-3">
+      <h1 class="search_title">Search</h1>
+      <div class="col-md-11 col-sm-11 col-xs-11 form-group pull-right top_search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." id='stockName'>
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" id="subStockName">Go!</button>
+            </span>
+          </div>
+        </div>
+      </nav>
+  </div>
+
+
+  <!-- ECharts -->
+  <script src="{{ url_for('static', filename='./vendors/echarts/dist/echarts.js') }}"></script>
+  <script src="{{ url_for('static', filename='./vendors/echarts/map/js/world.js') }}"></script>
+  <!-- jQuery -->
+  <script src="{{ url_for('static', filename='./vendors/jquery/dist/jquery.min.js') }}"></script>
+  <!-- Custom Theme Scripts -->
+  <script src="{{ url_for('static', filename='./build/js/mainPage.js') }}"></script>
+
+
+    {% block footer %}
+
+  <footer class="footer">
+    <div class="pull-right intro">
+    <p><span style="color: #ffffff">Copyright ©2018</span>, Chaoya Yan, Yixuan Duan, Zhiwen Wang, Chengtian Liu, Shuaishuai Sun</p>
+    </div>
+  </footer>
+    {% endblock %}
+
+</body>
+    {% endblock %}
+
