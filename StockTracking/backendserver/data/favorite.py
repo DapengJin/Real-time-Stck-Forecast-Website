@@ -5,7 +5,6 @@ import sqlite3
 # define database engines
 sqlite_engine = create_engine(
     'sqlite:///database.db',
-    convert_unicode=True,
     echo=True
 )
 

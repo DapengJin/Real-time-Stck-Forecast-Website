@@ -13,3 +13,4 @@ pandas
 matplotlib
 sklearn
 alpha_vantage
+email_validator

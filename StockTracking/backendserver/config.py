@@ -14,8 +14,8 @@ api_key = 'EQ6GGWD5D4ME4283'
 
 
 # get TimeSeries/TechIndicator object of Alpha Vantage API
-ts = TimeSeries(key=api_key, output_format='pandas', retries=20)
-ti = TechIndicators(key=api_key, output_format='pandas', retries=20)
+ts = TimeSeries(key=api_key, output_format='pandas')
+ti = TechIndicators(key=api_key, output_format='pandas')
 
 # using alpha vantage finance api to save data into a pandas dataframe
 stocks = ['AAPL', 'GOOGL', 'NVDA', 'AABA', 'AMZN', 'MSFT', 'BAC', 'NKE', 'NFLX', 'FB']
